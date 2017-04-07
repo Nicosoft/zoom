@@ -1,0 +1,21 @@
+{
+    "name": "philipbrown/Nacho",
+    "description": "ZOOM.us API Wrapper",
+    "license": "MIT",
+    "keywords": ["phpzoom"],
+    "authors": [
+        {
+            "name": "Nicolas Jourdain",
+            "email": "nicolas.jourdain@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nicosoft\\Zoom\\": "src"
+        }
+    }
+}
