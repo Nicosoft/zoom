@@ -192,6 +192,11 @@ class Zoom{
 	  $listRecordingArray['host_id'] = $params['host_id'];
 	  return $this->sendRequest('recording/list', $listRecordingArray);
 	}
+	function getRecording($params=array()) {
+	    $listRecordingArray = array();
+	    $listRecordingArray['meeting_id'] = $params['meeting_id'];
+	    return $this->sendRequest('recording/get', $listRecordingArray);
+	}
 	/*Functions for management of reports*/
 	function getDailyReport($params=array()) {
 	  $getDailyReportArray = array();
