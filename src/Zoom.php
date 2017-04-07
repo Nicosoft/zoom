@@ -9,9 +9,28 @@ class Zoom{
     private $api_secret = 'Please Input Your Own API Secret Here';
     private $api_url = 'https://api.zoom.us/v1/';
 
+    function __construct($config=array()) {
+                    
+        if(empty($config)) {
+            $this->loadConfigFile();
+        } else {
+            $this->api_key = $config['api_key'];
+            $this->api_secret = $config['api_secret'];
+            $this->api_url = $config['api_url'];
+        }
+    }
+    
+    
+    private function loadConfigFile() {
+        $config = parse_ini_file("config.ini");
+        $this->api_key = $config['api_key'];
+        $this->api_secret = $config['api_secret'];
+        $this->api_url = $config['api_url'];
+    }
+    
     /*Function to send HTTP POST Requests*/
     /*Used by every function below to make HTTP POST call*/
-    function sendRequest($calledFunction, $data){
+    private function sendRequest($calledFunction, $data){
     	/*Creates the endpoint URL*/
     	$request_url = $this->api_url.$calledFunction;
     

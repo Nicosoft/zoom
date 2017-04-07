@@ -1,0 +1,4 @@
+; This is a sample configuration file for Zoom
+api_key = 'Please Input Your Own API Key Here';
+api_secret = 'Please Input Your Own API Secret Here';
+api_url = 'https://api.zoom.us/v1/';
